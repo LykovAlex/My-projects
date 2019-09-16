@@ -1,0 +1,29 @@
+.title{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 750px;
+  @include md(width, 75%);
+  @include to(480px){
+    top: 35%;
+  }
+  &__name{
+    font-family: 'Edward', sans-serif;
+    font-size: 3.75rem;
+    font-weight: bold;
+    line-height: 0.75;
+    color: $lightGreen;
+  }
+  &__description{
+    font-size: 4.25rem;
+    line-height: 1.2;
+    @include to(480px){
+      font-size: 3.75rem;
+    }
+  }
+  &__text{
+    line-height: 1.875;
+  }
+}

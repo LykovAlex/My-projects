@@ -1,0 +1,12 @@
+.task{
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.task:last-child{
+  margin-bottom: 0px;
+}
+.complete{
+  opacity: .5;
+  text-decoration: line-through;
+}

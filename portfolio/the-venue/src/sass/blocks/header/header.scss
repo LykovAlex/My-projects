@@ -1,0 +1,112 @@
+
+@import "header-title";
+@import "header-scroll-icon";
+@import "header-mobile-menu";
+
+.page__header{
+  width: 100%;
+  background: url('../images/home.jpg') center top no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  max-width: 1920px;
+  margin: 0 auto 100px;
+  // padding-top: 35%;
+  min-height: 100%;
+  color: $white;
+  position: relative;
+  @include from(2800px){
+    min-height: 50%;
+  }
+}
+.header{
+  width: 100%;
+  max-width: 1920px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  z-index: 30;
+  transition: 1s;
+  &__wrapper{
+    @include row-flex();
+    margin-top: 40px;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 60px auto 20px;
+  }
+  &__logo{
+    @include col();
+  }
+  &__menu{
+    @include col();
+    @include md(display, none);
+  }
+  &__phone{
+    @include col();
+  }
+  &__mobileMenu{
+    display: none;
+    @include md(display, block);
+  }
+}
+
+.logo{
+  color: $white;
+  &__title{
+    font-size: 2.25rem;
+    line-height: 0.75;
+    font-family: 'PT Sans Narrow', sans-serif;
+    &--footer{
+      font-size: 3.5rem;
+    }
+  }
+  &__subtitle{
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.680em;
+    line-height: 0.75;
+    margin-top: 12px;
+    &--footer{
+      font-size: 1.15rem;
+    }
+  }
+}
+
+.menu{
+  &__list{
+    display: flex;
+  }
+  &__item{
+    margin: 0 18px;
+  }
+  &__link{
+    color: $white;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    &:hover{
+      color: $lightGreen;
+    }
+  }
+}
+
+.phone{
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 2px solid $white;
+  @include to(480px){
+    display: none;
+  }
+  &__number{
+    color: $white;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+
+.header-scroll{
+  background-color: rgba(0,0,0,0.85);
+  margin-top: -40px;
+}

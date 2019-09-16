@@ -1,0 +1,31 @@
+body{
+  font-family: 'PT Sans', sans-serif;
+}
+ul,li{
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style: none
+}
+a{
+  color: $black;
+  text-decoration: none;
+  &:hover{
+    color: $black;
+  }
+}
+h1,h2,h3,h4,h5{
+  font-weight: 700;
+  color: $black;
+}
+h2{
+  text-align: center;
+}
+h3{
+  font-weight: 400;
+}
+img{
+  display: block;
+}

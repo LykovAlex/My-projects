@@ -1,0 +1,76 @@
+
+.sectionMobileMenu{
+  display: none;
+  position: fixed;
+  z-index: 20;
+  background-color: $lightGreen;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0px;
+  opacity: .95;
+  padding-top: 30%;
+  font-size: 1.45rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.95;
+  letter-spacing: 2px;
+  &__list li a{
+    color: white;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.mobileMenu{
+  display: none;
+  align-items: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1000;
+  @include md(display, flex);
+  @include col();
+  &:hover{
+    cursor: pointer;
+  }
+  &__button{
+    position: relative;
+    width: 15px;
+  }
+  &__text{
+    margin-right: 2px;
+  }
+  &__line, &__line::before, &__line::after{
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    transition: .5s;
+  }
+  &__line{
+    margin-top: -2px;
+    &::before, &::after{
+      content: '';
+    }
+    &::before{
+      transform: translateY(-5px);
+    }
+    &::after{
+      transform: translateY(5px);
+    }
+    &.activ{
+      height: 0px;
+    }
+    &.activ::before{
+      transform: rotate(45deg);
+    }
+    &.activ::after{
+      transform: rotate(-45deg);
+    }
+  }
+}

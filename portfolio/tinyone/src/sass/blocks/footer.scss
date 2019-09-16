@@ -1,0 +1,10 @@
+.footer{
+  padding-bottom: 100px;
+  background-color: $black;
+  &__text{
+    text-align: center;
+    max-width: 190px;
+    margin: 0 auto;
+    color: white;
+  }
+}

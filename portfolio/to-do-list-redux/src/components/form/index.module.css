@@ -1,0 +1,18 @@
+.form_description{
+  margin-bottom: 10px;
+}
+.ButtonSubmit{
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.ButtonSubmit_active{
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+}

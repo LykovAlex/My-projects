@@ -1,0 +1,34 @@
+.features{
+  padding: 90px 0;
+}
+.feature{
+  margin-top: 90px;
+  @media screen and(max-width: 768px){
+      align-items: center;
+  }
+  &__icon{
+    font-size: 3.15rem;
+    margin-right: 35px;
+  }
+  &__title{
+    font-size: 1.375rem;
+  }
+  &__text{
+    font-size: 1rem;
+  }
+}
+.title{
+  text-align: center;
+  &__main{
+    font-size: 2rem;
+    &--touch{
+      color: $yellow;
+    }
+  }
+  &__text{
+    font-size: 1.25rem;
+    &--touch{
+      color: $grey;
+    }
+  }
+}

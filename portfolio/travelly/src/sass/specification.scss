@@ -1,0 +1,24 @@
+@import "smart-grid";
+@import "fonts";
+@import "variables";
+@include reset();
+
+html, body{
+  height: 100%;
+  // задали чтобы прижать футер, при этом боди задали флекс а контенту жадность 1
+}
+html{
+  font-size: 100%;
+}
+ body{
+   font-family: 'OpenSans', sans-serif;
+   font-size: .9375rem;
+   display: flex;
+   flex-direction: column;
+}
+.content{
+  flex-grow: 1;
+}
+.wrapper{
+  @include wrapper();
+}

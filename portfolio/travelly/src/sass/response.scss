@@ -1,0 +1,39 @@
+@include to(992px){
+  html{
+    font-size: 95%;
+  }
+  .menu{
+    margin: 40px -15px;
+  }
+}
+@include to(576px){
+  html{
+    font-size: 90%;
+  }
+  .header{
+    min-height: 70vh;
+    padding-bottom: 0;
+  }
+  .offer{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+    &__title{
+      font-size: 1.7rem;
+    }
+  }
+  .footer-nav{
+    text-align: center;
+    .copyright{
+      order: 2;
+    }
+    .menu{
+      order: 1;
+      margin-bottom: 20px;
+      &__list--footer{
+        justify-content: center;
+        float: none;
+      }
+    }
+  }
+}

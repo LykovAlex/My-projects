@@ -1,0 +1,69 @@
+.destination{
+  text-align: center;
+  padding-bottom: 35px;
+  padding-top: 60px;
+}
+.destination-head{
+  margin-bottom: 35px;
+  &__title{
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  &__text{
+    color: $grey;
+  }
+}
+.destination-routes{
+  @include row-flex();
+  justify-content: space-around;
+  margin-bottom: 35px;
+}
+.route{
+  color: $grey;
+  background-color: $white;
+  border-bottom: 2px solid #e1e0d8;
+  @include col();
+  @include size(3);
+  @include size-md(5);
+  @include size-xs(8);
+  position: relative;
+  margin-bottom: 20px;
+  &__img{
+    width: 100%;
+  }
+  &__more{
+    color: $white;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__dark-background{
+    position: absolute;
+    background-color: $dark_transparent;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: .3s;
+    color: $white;
+    &:hover{
+      opacity: 1;
+    }
+  }
+  &__description{
+    padding: 20px 20px 18px;
+  }
+  &__title{
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  &__text{
+    font-size: 0.8125rem;
+  }
+}

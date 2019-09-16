@@ -1,0 +1,15 @@
+.tasks{
+  border: 1px solid black;
+  padding: 20px;
+  margin-left: 50px;
+  width: 100%;
+  text-align: center;
+}
+.task{
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.task:last-child{
+  margin-bottom: 0px;
+}

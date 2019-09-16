@@ -1,0 +1,132 @@
+.header{
+  width: 100%;
+  background: url('../img/bg.jpg') center top no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 600px;
+  max-width: $big_screen;
+  margin: 0 auto;
+  position: relative;
+}
+.header-nav{
+  @include row-flex();
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  @include col();
+}
+
+.btn-menu{
+  @include col();
+  display: block;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  &:hover{
+    cursor: pointer;
+  }
+  &__item, &__item::before, &__item::after{
+    background-color: $dark_transparent;
+    height: 2px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    transition: .5s;
+  }
+  &__item{
+    &::before, &::after{
+      content: '';
+    }
+    &::before{
+      transform: translateY(-7px);
+    }
+    &::after{
+      transform: translateY(7px);
+    }
+    &.activ{
+      height: 0px;
+    }
+    &.activ::before{
+      transform: rotate(45deg);
+    }
+    &.activ::after{
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.menu{
+    display: none;
+    margin: 40px -30px;
+    background-color: rgba(999,999,999, 0.8);
+    padding: 40px 10px;
+    position: absolute;
+    right: 0;
+    left: 0;
+  &__list{
+    display: flex;
+    justify-content: center;
+  }
+  &__item{
+    margin-left: 15px;
+  }
+  &__link{
+    color: #323232;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.offer{
+  background-color: $dark_transparent;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px 20px 0;
+  border-radius: 10% 10% 0 0 / 40% 40% 0 0;
+  text-align: center;
+  &__title{
+    color: $white;
+    font-size: 2.25rem;
+    margin-bottom: 25px;
+  }
+  &__form{
+    display: flex;
+    justify-content: center;
+  }
+  &__input{
+    width: 325px;
+    height: 40px;
+    box-sizing: border-box;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  &__button{
+    box-sizing: border-box;
+    border: none;
+    height: 40px;
+    width: 125px;
+    background-color: #fd4f32;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: $white;
+    cursor: pointer;
+    transition: .3s;
+    &:hover{
+      color: #fd4f32;
+      background-color: $white;
+    }
+  }
+}

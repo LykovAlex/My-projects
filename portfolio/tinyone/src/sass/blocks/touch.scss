@@ -1,0 +1,47 @@
+.touch{
+  padding-top: 95px;
+  padding-bottom: 45px;
+  background-color: $black;
+}
+.form{
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  @media screen and(max-width: 768px){
+      display: flex;
+      flex-direction: column;
+  }
+  &__input{
+    min-width: 580px;
+    border: none;
+    border-radius: 5px;
+    padding: 20px 23px;
+    margin-right: 20px;
+    @media screen and(max-width: 992px){
+      min-width: 300px;
+    }
+    @media screen and(max-width: 768px){
+      margin-right: 0;
+      margin-bottom: 20px;
+      min-width: 100%;
+    }
+  }
+  &__button{
+    min-width: 125px;
+    background-color: $yellow;
+    color: $black;
+    padding: 19px 23px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: .3s;
+    border: 1px solid $yellow;
+    &:hover{
+      cursor: pointer;
+      color: $yellow;
+      background-color: $black;
+    }
+  }
+}

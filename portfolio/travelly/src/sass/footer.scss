@@ -1,0 +1,26 @@
+.footer{
+  padding: 25px 0;
+}
+.footer-nav{
+  @include row-flex();
+  .copyright{
+    @include col();
+    @include size(6);
+    @include shift-right(2);
+    @include size-xs(12);
+    @include shift-xs(0);
+    color: #8b8b8b;
+    font-size: .875rem;
+  }
+  .menu{
+    @include col()
+    @include size(4);
+    @include size-xs(8);
+    @include shift-xs(2);
+  }
+}
+
+.menu__list--footer{
+  float: right;
+  display: flex;
+}
